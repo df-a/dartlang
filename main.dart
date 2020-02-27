@@ -1,11 +1,14 @@
 void main() {
-  var name = myName();
-
-  print('My name is $name');
-
+  var person = new Person('David');
+  person.printName();
 }
 
-String myName() {
-  return 'David;'
-}
+class Person {
+  String firstName;
 
+  Person(this.firstName);
+
+  printName() {
+    print(this.firstName);
+  }
+}
